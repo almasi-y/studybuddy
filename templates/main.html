@@ -10,9 +10,19 @@
 
 <body>
     {% include "navbar.html" %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li><li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     {% block content %}
     {% comment %} <h1>Home MAIN template</h1> {% endcomment %}
     {% endblock %}
+    
+
 </body>
 
 </html>
